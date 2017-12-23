@@ -349,31 +349,32 @@ function rpsCompare() {
 			// Player2 wins
 			console.log("scissors win");
 
-			database.ref().child("/outcome/").set("Scissors win!");
+			database.ref().child("/outcome/").set(player2Name + " wins!");
 			database.ref().child("/players/player1/loss").set(player1.loss + 1);
 			database.ref().child("/players/player2/win").set(player2.win + 1);
 		}
 
-	} else if (player1.choice === "Scissors") {
-		if (player2.choice === "Rock") {
+	} else if (player1.choice === "✌ Scissors ✌") {
+		if (player2.choice === "✊ Rock ✊") {
 			// Player2 wins
 			console.log("rock wins");
 
-			database.ref().child("/outcome/").set("Rock wins!");
+			database.ref().child("/outcome/").set(player2Name + " wins!");
 			database.ref().child("/players/player1/loss").set(player1.loss + 1);
 			database.ref().child("/players/player2/win").set(player2.win + 1);
-		} else if (player2.choice === "Paper") {
+
+		} else if (player2.choice === "✋ Paper ✋") {
 			// Player1 wins
 			console.log("scissors win");
 
-			database.ref().child("/outcome/").set(player2Name + " wins!");
+			database.ref().child("/outcome/").set(player1Name + " wins!");
 			database.ref().child("/players/player1/win").set(player1.win + 1);
 			database.ref().child("/players/player2/loss").set(player2.loss + 1);
 		} else {
 			// Tie
 			console.log("tie");
 
-			database.ref().child("/outcome/").set("Tie game!");
+			database.ref().child("/outcome/").set("It's a tie!");
 			database.ref().child("/players/player1/tie").set(player1.tie + 1);
 			database.ref().child("/players/player2/tie").set(player2.tie + 1);
 		}
