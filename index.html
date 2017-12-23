@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>RPS-Multiplayer</title>
+
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Firebase -->
+	<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+
+	<!-- Additional CSS -->
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+	<div class="container">
+
+		<!--  Title -->
+		<div class="jumbotron">
+			<img>
+		</div>
+
+		<!-- Name -->
+		<div class="formPanel text-center">
+			<form id="name-form">
+				<input type="text" id="name-input" placeholder="What's your name?">
+				<button type="button" id="add-name" class="btn btn-default">Enter</button>
+			</form>
+		</div>
+
+		<!-- Game Data -->
+		<div class="panel panel-default">
+			<div class="row">
+
+				<!-- Player 1 -->
+				<div class="col-lg-4 col-md-4 col-sm-4">
+					<div class="panel panel-default playerPanel" id="playerPanel1">
+						<div class="panel-heading panelName">
+							<h3 class="panel-title text-center" id="playerOneName"></h3>
+						</div>
+
+						<div class="panel-body panelOption text-center">
+							<div class="option">✊ Rock ✊</div>
+						</div>
+
+						<div class="panel-body panelOption text-center">
+							<div class="option">✋ Paper ✋</div>
+						</div>
+
+						<div class="panel-body panelOption text-center">
+							<div class="option">✌ Scissors ✌</div>
+						</div>
+
+
+						<div class="panel-body panelStats text-center">
+							<div class="stats" id="player1Stats"></div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Game Middle Section -->
+				<div class="col-lg-4 col-md-4 col-sm-4">
+					<div class="panel panel-default gamePanel">
+						<h3 class="panel-title text-center" id="waitingNotice"></h3>
+						<h3 class="panel-title text-center" id="roundOutcome">Choose Wisely</h3>
+					</div>
+				</div>
+
+				<!-- Player 2 -->
+				<div class="col-lg-4 col-md-4 col-sm-4">
+					<div class="panel panel-default playerPanel" id="playerPanel2">
+						<div class="panel-heading panelName">
+							<h3 class="panel-title text-center" id="playerTwoName"></h3>
+						</div>
+
+						<div class="panel-body panelOption text-center">
+							<div class="option">✊ Rock ✊</div>
+						</div>
+
+						<div class="panel-body panelOption text-center">
+							<div class="option">✋ Paper ✋</div>
+						</div>
+
+						<div class="panel-body panelOption text-center">
+							<div class="option">✌ Scissors ✌</div>
+						</div>
+
+
+						<div class="panel-body panelStats text-center">
+							<div class="stats" id="player2Stats"></div>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</div> <!-- End Game Data -->
+
+		<!-- Chat -->
+		<div class="row">
+
+			<div class="col-lg-12 col-md-12 col-sm-12">
+				<div id="chatDisplay"></div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="portlet-footer col-lg-12 col-md-12 col-sm-12">
+				<form role="form">
+					<div class="form-group">
+						<textarea class="form-control chatInput" id="chat-input" placeholder="Type here..."></textarea>
+					</div>
+					<div class="form-group">
+						<button type="button" class="btn btn-default pull-right" id="chat-send">Send</button>
+						<div class="clearfix"></div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+
+		<!--
+					<div class="chatPanel">
+						<form id="chat-form">
+							<textarea type="text" id="chat-input"></textarea>
+							<input id="chat-send" type="submit" value="Send">
+						</form>
+					</div>
+				</div>
+			</div> <!-- End Player Name Section  -->
+
+		</div> <!-- End Chat Section  -->
+
+		<!-- Footer -->
+		<div class="row">
+
+			<div id="footerSpacer">
+			</div>
+
+			<div class="footer navbar-fixed-bottom" id="footerPanel">
+			<div class="copyright">
+				 Peian Wang Strawson © 2017
+			</div>
+			</div>
+
+		</div> <!-- End the footer row -->
+
+	</div> <!-- End Bootstrap Grid -->
+
+	<!-- Javascript -->
+	<script type="text/javascript" src="assets/javascript/app.js"></script>
+
+</body>
+</html>

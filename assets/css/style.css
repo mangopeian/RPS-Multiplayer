@@ -1,0 +1,150 @@
+body {
+	background: url('../images/background.png');
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.jumbotron {
+	background: url('../images/header.png');
+	background-position: center center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+	margin-top:64px;
+}
+
+#name-form {
+margin-bottom: 40px;
+}
+
+#name-input {
+  height: 30px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #cdd9ea;
+}
+
+.btn-default{
+	background-color: #DCDCDC;
+	border-radius: 10px;
+}
+
+.panel {
+	background-color: transparent;
+	border: none;
+}
+
+.playerPanel {
+	border-radius: 10px;
+}
+
+.playerPanelTurn {
+	border: 5px solid #4aaaa5;
+}
+
+.playerPanel .panelName {
+	height: 65px;
+	background-color: #cdd9ea;
+	border-radius: 10px 10px 0px 0px;
+}
+
+.playerPanel .panelName h3 {
+	font-size: 25px;
+	color: #b03138;
+	margin-top: 8px;
+}
+
+.playerPanel .panelOption {
+	height: 50px;
+	background-color: #E9967A;
+	font-size: 22px;
+	color: #484848;
+}
+
+.playerPanel .panelOption .option {
+	margin-top: -5px;
+}
+
+.playerPanel .panelOption:hover {
+	background-color: #FF7F50;
+	cursor: pointer;
+}
+
+.playerPanel .panelOption:active {
+  background-color: #FF6347;
+}
+
+.playerPanel .panelStats {
+	height: 60px;
+	background-color: #F0E68C;
+	text-align: center;
+	font-weight: normal;
+	font-size: 20px;
+	color: #084596;
+	border-radius: 0px 0px 10px 10px;
+}
+
+.gamePanel {
+	height: 281px;
+	background-color: transparent;
+	border: 3px dashed #DCDCDC;
+	border-radius: 10px;
+}
+
+.gamePanel h3 {
+	font-size: 50px;
+	color: #4aaaa5;
+	margin-top: 40px;
+}
+
+#waitingNotice {
+	font-size: 20px;
+	color: #084596;
+}
+
+#chatDisplay {
+	height: 150px;
+	width: 100%;
+	overflow: auto;
+	text-align: left;
+  	border-radius: 10px;
+  	background-color: #cdd9ea;
+	font-size: 1em;
+	color: #084596;
+	padding: 1em 1em 1em 1em;
+}
+
+.chatInput {
+	margin-top: 10px;
+  	border-radius: 10px;
+  	background-color: #DCDCDC;
+}
+
+.chatColor1 {
+	color: #b03138;
+}
+
+.chatColor2 {
+	color: #084596;
+}
+
+.chatColorDisconnected {
+	color: #efad0d;
+}
+
+.chatColorJoined {
+	color: green;
+}
+
+
+#footerSpacer {
+  background: transparent;
+  width: 100%;
+  height: 70px;
+}
+
+#footerPanel {
+	text-align: center;
+	color: #484848;
+	background-color: #4aaaa5;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
